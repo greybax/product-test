@@ -10,13 +10,13 @@ router.get('/', function (req, res, next) {
     return res.json({ products });
   }
 
-  let calcPage = products.length - (Math.floor(products.length / page));
-  let calcSize = calcPage + size > products.length
+  let start = size * (page - 1);
+  let end = size * page > products.length
     ? products.length
-    : calcPage + size;
+    : page * size;
 
   let result = [];
-  for (let i = calcPage; i < calcSize; i++) {
+  for (let i = start; i < end; i++) {
     result.push(products[i]);
   }
 

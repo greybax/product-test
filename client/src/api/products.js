@@ -1,8 +1,8 @@
 const ProductsAPI = {
 
-  showFirst: function (cb) {
+  show: function (page, size, cb) {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:8000/api/products?page=1&size=8");
+    xhr.open("GET", `http://localhost:8000/api/products?page=${page}&size=${size}`);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.onload = () => {

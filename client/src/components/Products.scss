@@ -16,7 +16,7 @@
 
   @media only screen and (max-width: 640px) {
     .product {
-      width: 300px;
+      width: 46%;
     }
 
     .title {
@@ -29,9 +29,9 @@
     }
   }
 
-  @media only screen and (min-width: 640px) and (max-width: 1024px) {
+  @media only screen and (min-width: 641px) and (max-width: 1024px) {
     .product {
-      width: 240px;
+      width: 30%;
     }
 
     .title {

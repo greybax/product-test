@@ -29,6 +29,7 @@ class Products extends Component {
     ProductsAPI.show(page, this.state.size, (tiles => {
       let prevTiles = this.state.tiles;
       let allTiles = prevTiles.concat(tiles);
+
       this.setState({
         tiles: allTiles,
         currentPage: page
